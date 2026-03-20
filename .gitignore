@@ -1,0 +1,9 @@
+# Archivos grandes que NO queremos subir
+data/
+logs/
+*.csv
+*.parquet
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/

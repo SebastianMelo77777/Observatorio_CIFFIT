@@ -1,0 +1,7 @@
+requests
+pandas
+pyarrow
+pyyaml
+tenacity
+python-dotenv
+schedule

@@ -1,0 +1,15 @@
+project:
+  name: "Observatorio Fiscal Javeriana - CUIPO Ejecución Gastos"
+
+urls:
+  metadata_url: "https://www.datos.gov.co/api/views/4f7r-epif.json"
+  csv_export_url: "https://www.datos.gov.co/api/views/4f7r-epif/rows.csv?accessType=DOWNLOAD"
+
+paths:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  last_update_file: "data/last_update.json"
+
+processing:
+  chunk_size: 100000
+  numeric_columns: ["compromisos", "obligaciones", "pagos"]
