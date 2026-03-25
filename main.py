@@ -13,10 +13,10 @@ logging.basicConfig(level=logging.INFO,
 
 if __name__ == "__main__":
     config = load_config()
-    print("🚀 Iniciando verificación CUIPO - Observatorio Fiscal Javeriana")
+    print("Iniciando verificación CUIPO - Observatorio Fiscal Javeriana")
     
     if has_new_data(config):
-        print("✅ Se detectaron nuevos datos")
+        print(" Se detectaron nuevos datos")
         raw_path = download_full_csv(config)
         parquet_path = clean_data(raw_path, config)
         
@@ -26,6 +26,6 @@ if __name__ == "__main__":
         }
         with open(config["paths"]["last_update_file"], "w") as f:
             json.dump(meta, f)
-        print("🎉 ¡Proceso completo! Revisa data/processed/")
+        print(" ¡Proceso completo! Revisa data/processed/")
     else:
-        print("ℹ️ No hay datos nuevos esta vez")
+        print("No hay datos nuevos esta vez")
